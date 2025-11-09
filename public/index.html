@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reference Machine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="search-panel">
+        <h1>Reference Machine</h1>
+        <p class="tagline">Drop a film, book, or artwork to spin a web of references.</p>
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            name="query"
+            placeholder="What should we explore?"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+        <div id="status" aria-live="polite"></div>
+      </section>
+      <section class="board-wrapper">
+        <div id="board" role="region" aria-live="polite"></div>
+      </section>
+    </main>
+    <template id="card-template">
+      <article class="result-card">
+        <header>
+          <h2 class="card-title"></h2>
+          <p class="card-subtitle"></p>
+        </header>
+        <section class="card-section themes">
+          <h3>Thematic Threads</h3>
+          <ul></ul>
+        </section>
+        <section class="card-section cross-media">
+          <h3>Cross-Media Echoes</h3>
+          <ul></ul>
+        </section>
+        <section class="card-section contemporary">
+          <h3>Contemporary Resonance</h3>
+          <ul></ul>
+        </section>
+        <section class="card-section conversations">
+          <h3>Conversation Starters</h3>
+          <ul></ul>
+        </section>
+        <section class="card-section further">
+          <h3>Further Exploration</h3>
+          <ul></ul>
+        </section>
+      </article>
+    </template>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
